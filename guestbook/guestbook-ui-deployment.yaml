@@ -13,8 +13,9 @@ spec:
       labels:
         app: guestbook-ui
     spec:
-  containers:
-  - name: guestbook-ui
-    image: docker.io/hekai/gcr.io_heptio-images_ks-guestbook-demo_0.2:latest # <-- Verified path
-    imagePullPolicy: IfNotPresent                                           # <-- Local cache priority
-
+      containers:
+      - name: guestbook-ui
+        image: docker.io/hekai/gcr.io_heptio-images_ks-guestbook-demo_0.2:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
