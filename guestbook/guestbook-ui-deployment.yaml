@@ -13,8 +13,8 @@ spec:
       labels:
         app: guestbook-ui
     spec:
-      containers:
-      - image: docker.io/mabusaa/ks-guestbook-demo:0.2
-        name: guestbook-ui
-        ports:
-        - containerPort: 80 # <-- This is around line 17. Ensure it's exactly aligned.
+  containers:
+  - name: guestbook-ui
+    image: docker.io/hekai/gcr.io_heptio-images_ks-guestbook-demo_0.2:latest # <-- Verified path
+    imagePullPolicy: IfNotPresent                                           # <-- Local cache priority
+
